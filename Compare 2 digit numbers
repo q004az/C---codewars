@@ -1,0 +1,12 @@
+enum percent {P_100, P_50, P_0};
+
+enum percent compare(unsigned short a, unsigned short b){
+  
+  if ((((a/10) == (b/10)) && ((a%10) == (b%10))) || (((a/10) == (b%10)) && ((a%10) == (b/10))))
+    return P_100;
+  if ((((a/10) != (b/10)) && ((a%10) == (b%10))) || (((a/10) == (b/10)) && ((a%10) != (b%10))) || (((a/10) == (b%10)) && ((a%10) != (b/10))) || (((a/10) != (b%10)) && ((a%10) == (b/10))))
+    return P_50;
+  if (((a/10) != (b/10)) && ((a%10) != (b%10)))
+    return P_0;
+}
+17 days agoRefactorDiscuss
