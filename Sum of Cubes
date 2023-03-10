@@ -1,0 +1,12 @@
+unsigned long long sum_cubes(unsigned short n)
+{
+  unsigned long long int sum = 0;
+  unsigned long long int det = 0;
+  for (unsigned long long int i = 0; i <=n; i++)
+  {
+    det = i * i *i;
+    sum+=det;
+  }
+  
+  return sum;
+}
